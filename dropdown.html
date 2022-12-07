@@ -1,0 +1,41 @@
+<html>
+</head>
+
+<body>
+    
+    <select  id ="select" onchange ="disablerejection(this)">
+       
+        <option value="" >-- select --</option>
+        <option value="A">Active</option>
+        <option value="I">Inactive</option>
+        <option value="AP">Approved</option>
+        <option value="U">Unregistered</option>
+    </select>
+    
+    
+    <select id="reject" disabled="">
+        <option value="" >-- select sports --</option>
+        <option value="Aadhar image not clear">Aadhar image not clear</option>
+        <option value="PAN image not clear">PAN image not clear</option>
+        <option value="Name not give/missmatch">Name not give/missmatch</option>
+        <option value="PAN no Missmatch">PAN no Missmatch</option>
+        <option value="Date of birth not given /missmatch">Date of birth not given /missmatch</option>
+
+    </select>
+    <script
+        type="text/javascript">
+        function disablerejection(reason){
+            console.log(reason.value)
+            if(reason.value == 'U' ){
+                document.getElementById("reject").disabled = false;
+
+            }else{
+                document.getElementById("reject").disabled = true;
+            }
+        };
+
+    </script>
+    
+    
+</body>
+</html>
